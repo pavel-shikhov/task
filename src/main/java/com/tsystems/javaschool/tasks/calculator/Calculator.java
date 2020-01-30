@@ -3,12 +3,6 @@ package com.tsystems.javaschool.tasks.calculator;
 import java.util.*;
 
 public class Calculator {
-    public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-//        System.out.println(calculator.evaluate("5+41..1-6"));
-        System.out.println(calculator.evaluate("3/0"));
-    }
-
     /**
      * Evaluate statement represented as string.
      *
