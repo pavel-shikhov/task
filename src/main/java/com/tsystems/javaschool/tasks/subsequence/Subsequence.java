@@ -3,13 +3,6 @@ package com.tsystems.javaschool.tasks.subsequence;
 import java.util.*;
 
 public class Subsequence {
-
-    public static void main(String[] args) {
-        ArrayList<String> a = new ArrayList<>(Arrays.asList("A", "B", "C", "D"));
-        ArrayList<String> b = new ArrayList<>(Arrays.asList("BD", "A", "ABC", "B", "M", "D", "M","C", "DC", "D"));
-        System.out.println(find(a, b));
-    }
-
     /**
      * Checks if it is possible to get a sequence which is equal to the first
      * one by removing some elements from the second one.

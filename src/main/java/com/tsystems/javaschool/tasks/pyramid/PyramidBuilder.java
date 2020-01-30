@@ -3,14 +3,6 @@ package com.tsystems.javaschool.tasks.pyramid;
 import java.util.*;
 
 public class PyramidBuilder {
-    public static void main(String[] args) {
-        PyramidBuilder pb = new PyramidBuilder();
-        int[][] p = pb.buildPyramid(new ArrayList<>(Arrays.asList(1, 3, 2, 9, 4, null)));
-//        int[][] p = pb.buildPyramid(input);
-        for (int[] row : p){
-            System.out.println(Arrays.toString(row));
-        }
-    }
     /**
      * Builds a pyramid with sorted values (with minumum value at the top line and maximum at the bottom,
      * from left to right). All vacant positions in the array are zeros.
