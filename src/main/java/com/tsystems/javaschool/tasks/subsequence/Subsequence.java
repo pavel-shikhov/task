@@ -1,8 +1,14 @@
 package com.tsystems.javaschool.tasks.subsequence;
 
-import java.util.List;
+import java.util.*;
 
 public class Subsequence {
+
+    public static void main(String[] args) {
+        ArrayList<String> a = new ArrayList<>(Arrays.asList("A", "B", "C", "D"));
+        ArrayList<String> b = new ArrayList<>(Arrays.asList("BD", "A", "ABC", "B", "M", "D", "M","C", "DC", "D"));
+        System.out.println(find(a, b));
+    }
 
     /**
      * Checks if it is possible to get a sequence which is equal to the first
@@ -13,8 +19,25 @@ public class Subsequence {
      * @return <code>true</code> if possible, otherwise <code>false</code>
      */
     @SuppressWarnings("rawtypes")
-    public boolean find(List x, List y) {
-        // TODO: Implement the logic here
-        return false;
+    public static boolean find(List x, List y) {
+        boolean yContainsX = false;
+        if (Objects.equals(null, x) || Objects.equals(null, y)){
+            throw new IllegalArgumentException();
+        }
+        if ((x.isEmpty() && !y.isEmpty()) || (x.isEmpty() && y.isEmpty())){
+            return true;
+        }
+        int i = 0;
+        for (Object o : y) {
+            if (o == x.get(i)) {
+                if (i < x.size() - 1) {
+                    i++;
+                } else if (i == x.size() - 1) {
+                    yContainsX = true;
+                    break;
+                }
+            }
+        }
+        return yContainsX;
     }
 }
